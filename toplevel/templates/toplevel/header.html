@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Danupat Kns</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+	html,
+	body {
+		height:100%
+	}
+	</style>
+	<!-- Map Style -->
+	<style>
+	  #map-container { height: 340px }
+    </style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:92%; ">
+		<div class="row">
+			<div align="left" class="col-sm-2">
+				<br>
+				<center>
+					<img src="{% static 'img/brown.png' %}" class="responsive-img" style='max-height:100px;' alt="face">
+				</center>
+			</div>
+			<div align="center" class="col-sm-8">
+				<br>
+				<h3><font color="brown">Hi, I'm "Brown"!</font></h3>
+			</div>
+			
+			<div align="right" class="col-lg-2">
+				<br><br><br><br>
+				<div align="right" class="input-group" style='margin-right:10px'>
+					<input type="text" class="form-control" placeholder="Search for..">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Go!</button>
+					</span>
+				</div><!-- /input-group -->	
+			</div><!-- /.col-lg-6 -->
+			
+		</div><hr>
+		<div class="row">
+			<div class="col-sm-2">
+				<!-- Great, til you resize. -->
+				<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+				<div align = "center" class="well bs-sidebar" id="sidebar" style="background-color:#fff">
+					<ul class="nav nav-pills nav-stacked">
+					{% block content %}
+					{% endblock %}	
+				</div>
+			</div>
+
+		</div> 
+	</div>
+	<footer>
+		<div align="right" class="container-fluid" style='margin-right:10px'> 
+				<a href="https://github.com/5730196321-DK" target="new">Github</a> | <a href="https://www.fb.com/Danupat.Kns" target="new">Facebook</a> | <a href="https://twitter.com/jr_kns" target="new">Twitter</a> | <a href="https://www.instagram.com/jr_kns/" target="new">Instagram</a>
+				<br><font color="grey">This website was created by basic HTML,CSS,Python and dJango!</font>
+		</div>
+	</footer>	
+</body>
+
+</html>
